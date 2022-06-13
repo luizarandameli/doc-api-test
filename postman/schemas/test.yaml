@@ -1,0 +1,951 @@
+openapi: 3.0.1
+info:
+  title: OpenAPI definition
+  version: v0
+servers:
+- url: http://localhost:8082
+  description: Generated server url
+tags:
+- name: ramp-type
+  description: Endpoints to manage the ramp types to sorter
+- name: Sorter API
+  description: Endpoints to manage the Sorter and configuration to sorter
+- name: Ramp API
+  description: Endpoints to manage the ramps of sorter
+- name: Preset Ramp API
+  description: Endpoint to manage the preset ramp of sorter
+- name: Configuration API
+  description: Endpoints to manage the Configurations to sorter
+- name: preset
+  description: Endpoints to manage the presets to sorter
+paths:
+  /sorter/{sorter}/ramp/{ramp_id}:
+    get:
+      tags:
+      - Ramp API
+      summary: list ramps
+      description: Returns a list of ramps
+      operationId: findById
+      parameters:
+      - name: ramp_id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "404":
+          description: Ramp not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+        "200":
+          description: Returns a list of Ramps
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RampDTO'
+        "500":
+          description: To represent some server side related error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+    put:
+      tags:
+      - Ramp API
+      summary: update ramp
+      description: Updated a ramp
+      operationId: update
+      parameters:
+      - name: ramp_id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RampDTO'
+        required: true
+      responses:
+        "404":
+          description: Ramp not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+        "200":
+          description: Ramp updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RampDTO'
+        "500":
+          description: To represent some server side related error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+    delete:
+      tags:
+      - Ramp API
+      summary: delete ramp
+      description: Delete a ramp by id
+      operationId: deleteById
+      parameters:
+      - name: ramp_id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: Delete a ramp by id
+        "404":
+          description: Ramp not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+        "500":
+          description: To represent some server side related error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+  /sorter/{sorterId}/preset/{id}:
+    get:
+      tags:
+      - preset
+      summary: find preset
+      description: Returns a preset by id
+      operationId: find
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: Returns a preset by id
+          content:
+            application/json:
+              schema:
+                type: string
+        "500":
+          description: To represent some server side related error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+    put:
+      tags:
+      - preset
+      summary: update preset
+      description: Update a preset
+      operationId: update_1
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdatePresetDTO'
+        required: true
+      responses:
+        "200":
+          description: Preset updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PresetDTO'
+        "500":
+          description: To represent some server side related error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+    delete:
+      tags:
+      - preset
+      summary: delete preset
+      description: Delete a preset
+      operationId: delete
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: Preset deleted successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PresetDTO'
+        "500":
+          description: To represent some server side related error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+  /sorter/{id}:
+    put:
+      tags:
+      - Sorter API
+      summary: update sorter
+      description: Updated a sorter
+      operationId: update_2
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SorterDTO'
+        required: true
+      responses:
+        "404":
+          description: Sorter not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+        "200":
+          description: Sorter updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SorterDTO'
+        "500":
+          description: To represent some server side related error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+  /ramp-type/{id}:
+    get:
+      tags:
+      - ramp-type
+      summary: find ramp type
+      description: Returns a ramp type by id
+      operationId: find_1
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: Returns a ramp type by id
+          content:
+            application/json:
+              schema:
+                type: string
+        "500":
+          description: To represent some server side related error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+    put:
+      tags:
+      - ramp-type
+      summary: update ramp type
+      description: Update a ramp type
+      operationId: update_3
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RampTypeDTO'
+        required: true
+      responses:
+        "200":
+          description: Ramp type updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RampTypeDTO'
+        "500":
+          description: To represent some server side related error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+    delete:
+      tags:
+      - ramp-type
+      summary: delete ramp type
+      description: Delete a ramp type
+      operationId: delete_1
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: Ramp type deleted successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RampTypeDTO'
+        "500":
+          description: To represent some server side related error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+  /preset/{presetId}/ramp/{rampId}:
+    get:
+      tags:
+      - Preset Ramp API
+      summary: find ramp
+      description: Returns a ramp type by id
+      operationId: findPresetRampDTO
+      parameters:
+      - name: presetId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: rampId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "500":
+          description: To represent some server side related error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+        "200":
+          description: Returns a ramp and routes by id
+          content:
+            application/json:
+              schema:
+                type: string
+    put:
+      tags:
+      - Preset Ramp API
+      summary: update preset pamp
+      description: Updated a Preset Ramp
+      operationId: update_4
+      parameters:
+      - name: presetId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: rampId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PresetRampDTO'
+        required: true
+      responses:
+        "200":
+          description: Preset Ramp updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PresetRampDTO'
+        "500":
+          description: To represent some server side related error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+        "404":
+          description: Preset Ramp not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+  /sorter:
+    get:
+      tags:
+      - Sorter API
+      summary: list sorter
+      description: Returns a list of sorter
+      operationId: findAll
+      responses:
+        "200":
+          description: Returns a list of Sorters
+          content:
+            application/json:
+              schema:
+                type: string
+        "500":
+          description: To represent some server side related error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+    post:
+      tags:
+      - Sorter API
+      summary: save sorter
+      description: Save a sorter
+      operationId: create
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SorterDTO'
+        required: true
+      responses:
+        "200":
+          description: Sorter saved successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SorterDTO'
+        "500":
+          description: To represent some server side related error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+  /sorter/{sorter}/ramp:
+    get:
+      tags:
+      - Ramp API
+      summary: list ramps
+      description: Returns a list of ramps
+      operationId: findBySorter
+      parameters:
+      - name: sorter
+        in: path
+        required: true
+        schema:
+          $ref: '#/components/schemas/Sorter'
+      responses:
+        "200":
+          description: Returns a list of ramps
+          content:
+            application/json:
+              schema:
+                type: string
+        "500":
+          description: To represent some server side related error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+    post:
+      tags:
+      - Ramp API
+      summary: save ramp
+      description: Save a ramp
+      operationId: create_1
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RampDTO'
+        required: true
+      responses:
+        "200":
+          description: Ramp saved successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RampDTO'
+        "500":
+          description: To represent some server side related error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+  /sorter/{sorterId}/preset:
+    get:
+      tags:
+      - preset
+      summary: list preset by sorter
+      description: Returns a list of presets by sorter
+      operationId: findBySorter_1
+      parameters:
+      - name: sorterId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: active
+        in: query
+        required: false
+        schema:
+          type: boolean
+      responses:
+        "200":
+          description: Returns a list of presets
+          content:
+            application/json:
+              schema:
+                type: string
+        "500":
+          description: To represent some server side related error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+    post:
+      tags:
+      - preset
+      summary: save preset
+      description: Save a preset
+      operationId: save
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PresetDTO'
+        required: true
+      responses:
+        "200":
+          description: Preset saved successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PresetDTO'
+        "500":
+          description: To represent some server side related error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+  /ramp-type:
+    get:
+      tags:
+      - ramp-type
+      summary: list ramp type
+      description: Returns a list of ramp types
+      operationId: findAll_1
+      responses:
+        "200":
+          description: Returns a list of ramp types
+          content:
+            application/json:
+              schema:
+                type: string
+        "500":
+          description: To represent some server side related error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+    post:
+      tags:
+      - ramp-type
+      summary: save ramp type
+      description: Save a ramp type
+      operationId: save_1
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RampTypeDTO'
+        required: true
+      responses:
+        "200":
+          description: Ramp type saved successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RampTypeDTO'
+        "500":
+          description: To represent some server side related error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+  /configuration:
+    get:
+      tags:
+      - Configuration API
+      summary: list configuration
+      description: Returns a list of configuration
+      operationId: findAll_2
+      responses:
+        "200":
+          description: Returns a list of Configurations
+          content:
+            application/json:
+              schema:
+                type: string
+        "500":
+          description: To represent some server side related error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+    post:
+      tags:
+      - Configuration API
+      summary: save configuration
+      description: Save a configuration
+      operationId: save_2
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ConfigurationDTO'
+        required: true
+      responses:
+        "200":
+          description: Configurations saved successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ConfigurationDTO'
+        "500":
+          description: To represent some server side related error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+  /sorter/{sorterId}/preset/activate/{id}:
+    patch:
+      tags:
+      - preset
+      summary: Activate preset
+      description: Activate a preset
+      operationId: activate
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: Preset activate successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PresetDTO'
+        "500":
+          description: To represent some server side related error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+  /sorter/{sorter_id}:
+    get:
+      tags:
+      - Sorter API
+      summary: list sorter
+      description: Returns a list of sorter
+      operationId: findById_1
+      parameters:
+      - name: sorter_id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "404":
+          description: Sorter not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+        "200":
+          description: Returns a list of Sorters
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SorterDTO'
+        "500":
+          description: To represent some server side related error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+    delete:
+      tags:
+      - Sorter API
+      summary: delete sorter
+      description: Delete a sorter by id
+      operationId: deleteById_1
+      parameters:
+      - name: sorter_id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "404":
+          description: Sorter not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+        "200":
+          description: Delete a sorter by id
+        "500":
+          description: To represent some server side related error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+  /ping:
+    get:
+      tags:
+      - ping-controller
+      operationId: ping
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: string
+components:
+  schemas:
+    RampDTO:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        name:
+          type: string
+        sorterId:
+          type: integer
+          format: int64
+        rampTypeId:
+          type: integer
+          format: int64
+    error:
+      type: object
+      properties:
+        error:
+          type: string
+        message:
+          type: string
+        status:
+          type: integer
+          format: int32
+        cause:
+          type: array
+          items:
+            type: string
+    PresetRampDTO:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        name:
+          type: string
+        routes:
+          type: array
+          items:
+            $ref: '#/components/schemas/RouteDTO'
+        active:
+          type: boolean
+        rampType:
+          $ref: '#/components/schemas/RampTypeDTO'
+    RampTypeDTO:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        name:
+          type: string
+        description:
+          type: string
+    RouteDTO:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        serviceId:
+          type: string
+        zone:
+          type: string
+    UpdatePresetDTO:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        name:
+          type: string
+        description:
+          type: string
+        ramps:
+          type: array
+          items:
+            $ref: '#/components/schemas/PresetRampDTO'
+    PresetDTO:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        name:
+          type: string
+        description:
+          type: string
+        sorterId:
+          type: integer
+          format: int64
+        ramps:
+          type: array
+          items:
+            $ref: '#/components/schemas/PresetRampDTO'
+        createdAt:
+          type: string
+        createdBy:
+          type: string
+        updatedAt:
+          type: string
+        updatedBy:
+          type: string
+        activatedAt:
+          type: string
+        activatedBy:
+          type: string
+        active:
+          type: boolean
+    SorterDTO:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        name:
+          type: string
+        description:
+          type: string
+        logisticCenterId:
+          type: string
+        active:
+          type: boolean
+        maxCapacityPerHour:
+          type: integer
+          format: int32
+        configurationIds:
+          type: array
+          items:
+            type: integer
+            format: int64
+        urls:
+          type: array
+          items:
+            $ref: '#/components/schemas/SorterUrlDTO'
+    SorterUrlDTO:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        alias:
+          type: string
+        url:
+          type: string
+    ConfigurationDTO:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        name:
+          type: string
+        description:
+          type: string
+    Configuration:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        name:
+          type: string
+        description:
+          type: string
+    Sorter:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        name:
+          type: string
+        description:
+          type: string
+        logisticCenterId:
+          type: string
+        active:
+          type: boolean
+        maxCapacityPerHour:
+          type: integer
+          format: int32
+        configurations:
+          type: array
+          items:
+            $ref: '#/components/schemas/Configuration'
+        urls:
+          type: array
+          items:
+            $ref: '#/components/schemas/SorterUrl'
+    SorterUrl:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        alias:
+          type: string
+        url:
+          type: string

@@ -1,0 +1,3424 @@
+{
+	"info": {
+		"_postman_id": "8c8e2023-42f4-4f28-b8d2-d2eab9c79bc0",
+		"name": "OpenAPI definition",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "sorter",
+			"item": [
+				{
+					"name": "{sorter}/ramp",
+					"item": [
+						{
+							"name": "{ramp id}",
+							"item": [
+								{
+									"name": "list ramps",
+									"id": "5cea1366-86a2-4cbf-ab27-65f7d68b3c49",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/sorter/:sorter/ramp/:ramp_id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"sorter",
+												":sorter",
+												"ramp",
+												":ramp_id"
+											],
+											"variable": [
+												{
+													"id": "8c65c4de-ba97-4bfe-808b-79466381ab32",
+													"key": "ramp_id",
+													"value": "55110855",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Returns a list of ramps"
+									},
+									"response": [
+										{
+											"id": "fbb7fd82-5a79-49c7-9cfe-454a144c29ef",
+											"name": "Returns a list of Ramps",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/sorter/:sorter/ramp/:ramp_id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"sorter",
+														":sorter",
+														"ramp",
+														":ramp_id"
+													],
+													"variable": [
+														{
+															"key": "ramp_id",
+															"value": "55110855",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n  \"id\": 65405323,\n  \"name\": \"anim magna amet\",\n  \"sorterId\": -50165707,\n  \"rampTypeId\": 87707995\n}"
+										},
+										{
+											"id": "6160912e-21d8-41b1-a466-45bd6d032ec6",
+											"name": "Ramp not found",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/sorter/:sorter/ramp/:ramp_id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"sorter",
+														":sorter",
+														"ramp",
+														":ramp_id"
+													],
+													"variable": [
+														{
+															"key": "ramp_id",
+															"value": "55110855",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n  \"error\": \"minim laboris Ut anim aute\",\n  \"message\": \"do Excepteur qui labore\",\n  \"status\": -17016758,\n  \"cause\": [\n    \"eiusmod ad sit\",\n    \"consequat laboris\"\n  ]\n}"
+										},
+										{
+											"id": "e8d29412-8441-4ebc-8af8-2c6e94593e2a",
+											"name": "To represent some server side related error",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/sorter/:sorter/ramp/:ramp_id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"sorter",
+														":sorter",
+														"ramp",
+														":ramp_id"
+													],
+													"variable": [
+														{
+															"key": "ramp_id",
+															"value": "55110855",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n  \"error\": \"minim laboris Ut anim aute\",\n  \"message\": \"do Excepteur qui labore\",\n  \"status\": -17016758,\n  \"cause\": [\n    \"eiusmod ad sit\",\n    \"consequat laboris\"\n  ]\n}"
+										}
+									]
+								},
+								{
+									"name": "update ramp",
+									"id": "f3cd98f0-37f2-43c2-9009-33422a655a94",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": 65405323,\n  \"name\": \"anim magna amet\",\n  \"sorterId\": -50165707,\n  \"rampTypeId\": 87707995\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/sorter/:sorter/ramp/:ramp_id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"sorter",
+												":sorter",
+												"ramp",
+												":ramp_id"
+											],
+											"variable": [
+												{
+													"id": "944d9284-81dd-4022-8544-ceb3cd17a6ee",
+													"key": "ramp_id",
+													"value": "55110855",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Updated a ramp"
+									},
+									"response": [
+										{
+											"id": "28f182d9-710f-42ff-bd82-a72edcf693c6",
+											"name": "Ramp updated successfully",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"id\": 65405323,\n  \"name\": \"anim magna amet\",\n  \"sorterId\": -50165707,\n  \"rampTypeId\": 87707995\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/sorter/:sorter/ramp/:ramp_id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"sorter",
+														":sorter",
+														"ramp",
+														":ramp_id"
+													],
+													"variable": [
+														{
+															"key": "ramp_id",
+															"value": "55110855",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n  \"id\": 65405323,\n  \"name\": \"anim magna amet\",\n  \"sorterId\": -50165707,\n  \"rampTypeId\": 87707995\n}"
+										},
+										{
+											"id": "bf9b5f50-926e-49d1-b911-b6d8aa4c3b7e",
+											"name": "Ramp not found",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"id\": 65405323,\n  \"name\": \"anim magna amet\",\n  \"sorterId\": -50165707,\n  \"rampTypeId\": 87707995\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/sorter/:sorter/ramp/:ramp_id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"sorter",
+														":sorter",
+														"ramp",
+														":ramp_id"
+													],
+													"variable": [
+														{
+															"key": "ramp_id",
+															"value": "55110855",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n  \"error\": \"minim laboris Ut anim aute\",\n  \"message\": \"do Excepteur qui labore\",\n  \"status\": -17016758,\n  \"cause\": [\n    \"eiusmod ad sit\",\n    \"consequat laboris\"\n  ]\n}"
+										},
+										{
+											"id": "612fddb4-a6c7-4d4b-b070-f81e30e02ba9",
+											"name": "To represent some server side related error",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"id\": 65405323,\n  \"name\": \"anim magna amet\",\n  \"sorterId\": -50165707,\n  \"rampTypeId\": 87707995\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/sorter/:sorter/ramp/:ramp_id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"sorter",
+														":sorter",
+														"ramp",
+														":ramp_id"
+													],
+													"variable": [
+														{
+															"key": "ramp_id",
+															"value": "55110855",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n  \"error\": \"minim laboris Ut anim aute\",\n  \"message\": \"do Excepteur qui labore\",\n  \"status\": -17016758,\n  \"cause\": [\n    \"eiusmod ad sit\",\n    \"consequat laboris\"\n  ]\n}"
+										}
+									]
+								},
+								{
+									"name": "delete ramp",
+									"id": "d3f724fa-f590-4df8-9125-0bdd0e05f7a2",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/sorter/:sorter/ramp/:ramp_id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"sorter",
+												":sorter",
+												"ramp",
+												":ramp_id"
+											],
+											"variable": [
+												{
+													"id": "c41664dd-5116-4d13-ad12-d967d0157c04",
+													"key": "ramp_id",
+													"value": "55110855",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Delete a ramp by id"
+									},
+									"response": [
+										{
+											"id": "7d75c3b8-bf76-48e1-9f8a-ef1aec726e80",
+											"name": "Delete a ramp by id",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/sorter/:sorter/ramp/:ramp_id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"sorter",
+														":sorter",
+														"ramp",
+														":ramp_id"
+													],
+													"variable": [
+														{
+															"key": "ramp_id",
+															"value": "55110855",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": ""
+										},
+										{
+											"id": "8835d00f-9bc6-4939-9b26-fc87422bc679",
+											"name": "Ramp not found",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/sorter/:sorter/ramp/:ramp_id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"sorter",
+														":sorter",
+														"ramp",
+														":ramp_id"
+													],
+													"variable": [
+														{
+															"key": "ramp_id",
+															"value": "55110855",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n  \"error\": \"minim laboris Ut anim aute\",\n  \"message\": \"do Excepteur qui labore\",\n  \"status\": -17016758,\n  \"cause\": [\n    \"eiusmod ad sit\",\n    \"consequat laboris\"\n  ]\n}"
+										},
+										{
+											"id": "df7a1457-ef28-4adb-935b-a638f1807b52",
+											"name": "To represent some server side related error",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/sorter/:sorter/ramp/:ramp_id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"sorter",
+														":sorter",
+														"ramp",
+														":ramp_id"
+													],
+													"variable": [
+														{
+															"key": "ramp_id",
+															"value": "55110855",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n  \"error\": \"minim laboris Ut anim aute\",\n  \"message\": \"do Excepteur qui labore\",\n  \"status\": -17016758,\n  \"cause\": [\n    \"eiusmod ad sit\",\n    \"consequat laboris\"\n  ]\n}"
+										}
+									]
+								}
+							],
+							"id": "3dc117ff-560c-4e2a-a56d-afa13ad3774c"
+						},
+						{
+							"name": "list ramps",
+							"id": "12df410b-aac1-4f43-a4fe-e8815204c9d5",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/sorter/:sorter/ramp",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"sorter",
+										":sorter",
+										"ramp"
+									],
+									"variable": [
+										{
+											"id": "fa568fb6-f521-48c4-a17d-3bf1107be0d0",
+											"key": "sorter",
+											"value": "id,18900855,name,nostrud voluptate dolore,description,sit incididunt ex occaecat,logisticCenterId,rep,active,true,maxCapacityPerHour,99797322,configurations,[object Object],[object Object],urls,[object Object],[object Object]",
+											"description": "(Required) "
+										}
+									]
+								},
+								"description": "Returns a list of ramps"
+							},
+							"response": [
+								{
+									"id": "b47df5b8-92b5-465c-bb51-7b9a14900e8a",
+									"name": "Returns a list of ramps",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/sorter/:sorter/ramp",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"sorter",
+												":sorter",
+												"ramp"
+											],
+											"variable": [
+												{
+													"key": "sorter",
+													"value": "id,18900855,name,nostrud voluptate dolore,description,sit incididunt ex occaecat,logisticCenterId,rep,active,true,maxCapacityPerHour,99797322,configurations,[object Object],[object Object],urls,[object Object],[object Object]",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "\"id ut ullamco magna\""
+								},
+								{
+									"id": "688a6f98-af3a-4b06-919e-e515dc8f3567",
+									"name": "To represent some server side related error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/sorter/:sorter/ramp",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"sorter",
+												":sorter",
+												"ramp"
+											],
+											"variable": [
+												{
+													"key": "sorter",
+													"value": "id,18900855,name,nostrud voluptate dolore,description,sit incididunt ex occaecat,logisticCenterId,rep,active,true,maxCapacityPerHour,99797322,configurations,[object Object],[object Object],urls,[object Object],[object Object]",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n  \"error\": \"minim laboris Ut anim aute\",\n  \"message\": \"do Excepteur qui labore\",\n  \"status\": -17016758,\n  \"cause\": [\n    \"eiusmod ad sit\",\n    \"consequat laboris\"\n  ]\n}"
+								}
+							]
+						},
+						{
+							"name": "save ramp",
+							"id": "cd6eca14-956c-4771-8f69-594f8a31ad51",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": 65405323,\n  \"name\": \"anim magna amet\",\n  \"sorterId\": -50165707,\n  \"rampTypeId\": 87707995\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/sorter/:sorter/ramp",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"sorter",
+										":sorter",
+										"ramp"
+									],
+									"variable": [
+										{
+											"key": "sorter"
+										}
+									]
+								},
+								"description": "Save a ramp"
+							},
+							"response": [
+								{
+									"id": "a4414ecd-b17a-40ad-8441-3e24b988ec9b",
+									"name": "Ramp saved successfully",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": 65405323,\n  \"name\": \"anim magna amet\",\n  \"sorterId\": -50165707,\n  \"rampTypeId\": 87707995\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/sorter/:sorter/ramp",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"sorter",
+												":sorter",
+												"ramp"
+											],
+											"variable": [
+												{
+													"key": "sorter"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n  \"id\": 65405323,\n  \"name\": \"anim magna amet\",\n  \"sorterId\": -50165707,\n  \"rampTypeId\": 87707995\n}"
+								},
+								{
+									"id": "ea8336ee-ed81-4207-9043-a6329697f536",
+									"name": "To represent some server side related error",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": 65405323,\n  \"name\": \"anim magna amet\",\n  \"sorterId\": -50165707,\n  \"rampTypeId\": 87707995\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/sorter/:sorter/ramp",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"sorter",
+												":sorter",
+												"ramp"
+											],
+											"variable": [
+												{
+													"key": "sorter"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n  \"error\": \"minim laboris Ut anim aute\",\n  \"message\": \"do Excepteur qui labore\",\n  \"status\": -17016758,\n  \"cause\": [\n    \"eiusmod ad sit\",\n    \"consequat laboris\"\n  ]\n}"
+								}
+							]
+						}
+					],
+					"id": "be327db5-0f1e-4872-af4d-bc85f7531d1a"
+				},
+				{
+					"name": "{sorter Id}/preset",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "find preset",
+									"id": "d72af45a-949a-47bc-8676-5a288834cfac",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/sorter/:sorterId/preset/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"sorter",
+												":sorterId",
+												"preset",
+												":id"
+											],
+											"variable": [
+												{
+													"id": "45ec9f18-826e-42ec-9710-d05f6c2508f1",
+													"key": "id",
+													"value": "55110855",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Returns a preset by id"
+									},
+									"response": [
+										{
+											"id": "43e69fdb-1a70-4a1c-8693-ca06352b4465",
+											"name": "Returns a preset by id",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/sorter/:sorterId/preset/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"sorter",
+														":sorterId",
+														"preset",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "55110855",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "\"id ut ullamco magna\""
+										},
+										{
+											"id": "b5a4e96a-131b-48ce-a012-abaf6dc4a3e9",
+											"name": "To represent some server side related error",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/sorter/:sorterId/preset/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"sorter",
+														":sorterId",
+														"preset",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "55110855",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n  \"error\": \"minim laboris Ut anim aute\",\n  \"message\": \"do Excepteur qui labore\",\n  \"status\": -17016758,\n  \"cause\": [\n    \"eiusmod ad sit\",\n    \"consequat laboris\"\n  ]\n}"
+										}
+									]
+								},
+								{
+									"name": "update preset",
+									"id": "558f67dd-61f6-4f97-bdcc-2748f8b47cc0",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": 33501334,\n  \"name\": \"dolor commodo elit ea\",\n  \"description\": \"mollit id dolor irure\",\n  \"ramps\": [\n    {\n      \"id\": -15708828,\n      \"name\": \"aute tempor\",\n      \"routes\": [\n        {\n          \"id\": 44642310,\n          \"serviceId\": \"officia Lorem\",\n          \"zone\": \"aliqua esse amet\"\n        },\n        {\n          \"id\": 42355131,\n          \"serviceId\": \"aliquip Duis sit minim\",\n          \"zone\": \"ipsum labore eu\"\n        }\n      ],\n      \"active\": false,\n      \"rampType\": {\n        \"id\": 3200867,\n        \"name\": \"dolor est\",\n        \"description\": \"qui non Duis\"\n      }\n    },\n    {\n      \"id\": 91698002,\n      \"name\": \"labore consectetur ipsum\",\n      \"routes\": [\n        {\n          \"id\": 66856405,\n          \"serviceId\": \"quis nisi Excepteur laborum\",\n          \"zone\": \"laborum minim irur\"\n        },\n        {\n          \"id\": 16029121,\n          \"serviceId\": \"dolore dolor nulla\",\n          \"zone\": \"consectetur laborum\"\n        }\n      ],\n      \"active\": true,\n      \"rampType\": {\n        \"id\": 67550203,\n        \"name\": \"velit esse exercitation culpa ullamco\",\n        \"description\": \"ea Lorem ullamco\"\n      }\n    }\n  ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/sorter/:sorterId/preset/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"sorter",
+												":sorterId",
+												"preset",
+												":id"
+											],
+											"variable": [
+												{
+													"id": "12dc9c68-b8b2-448e-8372-95952a011c8f",
+													"key": "id",
+													"value": "55110855",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Update a preset"
+									},
+									"response": [
+										{
+											"id": "0fdc83f9-ee99-425d-80f8-f12403ec013b",
+											"name": "Preset updated successfully",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"id\": -36545112,\n  \"name\": \"officia Ut\",\n  \"description\": \"dolor laboris anim et sed\",\n  \"ramps\": [\n    {\n      \"id\": -26776760,\n      \"name\": \"cillum labore anim\",\n      \"routes\": [\n        {\n          \"id\": -58170600,\n          \"serviceId\": \"enim laboris non dolore quis\",\n          \"zone\": \"non sunt eu\"\n        },\n        {\n          \"id\": -28143074,\n          \"serviceId\": \"ex est adipisicing\",\n          \"zone\": \"elit Lorem Duis magna ipsum\"\n        }\n      ],\n      \"active\": false,\n      \"rampType\": {\n        \"id\": 11878490,\n        \"name\": \"ex adipisicing nostrud et\",\n        \"description\": \"minim aliquip proident\"\n      }\n    },\n    {\n      \"id\": 94591061,\n      \"name\": \"veniam occaecat\",\n      \"routes\": [\n        {\n          \"id\": -21518877,\n          \"serviceId\": \"sit cupidatat culpa\",\n          \"zone\": \"officia sint velit\"\n        },\n        {\n          \"id\": -76486436,\n          \"serviceId\": \"consequat m\",\n          \"zone\": \"est re\"\n        }\n      ],\n      \"active\": true,\n      \"rampType\": {\n        \"id\": -73283280,\n        \"name\": \"id do\",\n        \"description\": \"non irure elit\"\n      }\n    }\n  ]\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/sorter/:sorterId/preset/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"sorter",
+														":sorterId",
+														"preset",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "55110855",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n  \"id\": 21356960,\n  \"name\": \"mollit ad sed\",\n  \"description\": \"veniam cupidatat reprehenderit ullamco aliqua\",\n  \"sorterId\": -91121938,\n  \"ramps\": [\n    {\n      \"id\": -10009561,\n      \"name\": \"laboris s\",\n      \"routes\": [\n        {\n          \"id\": 69785961,\n          \"serviceId\": \"nisi nulla esse\",\n          \"zone\": \"in id ut\"\n        },\n        {\n          \"id\": 93965286,\n          \"serviceId\": \"dolor nostrud\",\n          \"zone\": \"Excepteur anim deserunt\"\n        }\n      ],\n      \"active\": false,\n      \"rampType\": {\n        \"id\": 62672030,\n        \"name\": \"deserunt Excepteur dolor magna\",\n        \"description\": \"minim\"\n      }\n    },\n    {\n      \"id\": 27256583,\n      \"name\": \"ut\",\n      \"routes\": [\n        {\n          \"id\": 93064299,\n          \"serviceId\": \"id ullamco\",\n          \"zone\": \"irure\"\n        },\n        {\n          \"id\": 78010690,\n          \"serviceId\": \"tempor exercitation sunt consequat\",\n          \"zone\": \"proident amet in\"\n        }\n      ],\n      \"active\": false,\n      \"rampType\": {\n        \"id\": -95210080,\n        \"name\": \"sit et in\",\n        \"description\": \"dolor quis\"\n      }\n    }\n  ],\n  \"createdAt\": \"nulla nostrud adipisi\",\n  \"createdBy\": \"Duis elit\",\n  \"updatedAt\": \"dolor Duis\",\n  \"updatedBy\": \"reprehe\",\n  \"activatedAt\": \"dolore ut amet do\",\n  \"activatedBy\": \"quis\",\n  \"active\": true\n}"
+										},
+										{
+											"id": "7585674e-3a67-44f2-8a92-9fee4eb4f5de",
+											"name": "To represent some server side related error",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"id\": -36545112,\n  \"name\": \"officia Ut\",\n  \"description\": \"dolor laboris anim et sed\",\n  \"ramps\": [\n    {\n      \"id\": -26776760,\n      \"name\": \"cillum labore anim\",\n      \"routes\": [\n        {\n          \"id\": -58170600,\n          \"serviceId\": \"enim laboris non dolore quis\",\n          \"zone\": \"non sunt eu\"\n        },\n        {\n          \"id\": -28143074,\n          \"serviceId\": \"ex est adipisicing\",\n          \"zone\": \"elit Lorem Duis magna ipsum\"\n        }\n      ],\n      \"active\": false,\n      \"rampType\": {\n        \"id\": 11878490,\n        \"name\": \"ex adipisicing nostrud et\",\n        \"description\": \"minim aliquip proident\"\n      }\n    },\n    {\n      \"id\": 94591061,\n      \"name\": \"veniam occaecat\",\n      \"routes\": [\n        {\n          \"id\": -21518877,\n          \"serviceId\": \"sit cupidatat culpa\",\n          \"zone\": \"officia sint velit\"\n        },\n        {\n          \"id\": -76486436,\n          \"serviceId\": \"consequat m\",\n          \"zone\": \"est re\"\n        }\n      ],\n      \"active\": true,\n      \"rampType\": {\n        \"id\": -73283280,\n        \"name\": \"id do\",\n        \"description\": \"non irure elit\"\n      }\n    }\n  ]\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/sorter/:sorterId/preset/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"sorter",
+														":sorterId",
+														"preset",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "55110855",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n  \"error\": \"minim laboris Ut anim aute\",\n  \"message\": \"do Excepteur qui labore\",\n  \"status\": -17016758,\n  \"cause\": [\n    \"eiusmod ad sit\",\n    \"consequat laboris\"\n  ]\n}"
+										}
+									]
+								},
+								{
+									"name": "delete preset",
+									"id": "f43d4947-b459-4a4b-8a7c-d0f39a3714a7",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/sorter/:sorterId/preset/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"sorter",
+												":sorterId",
+												"preset",
+												":id"
+											],
+											"variable": [
+												{
+													"id": "27349d2a-286f-45e6-a4f8-00ab093b2402",
+													"key": "id",
+													"value": "55110855",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Delete a preset"
+									},
+									"response": [
+										{
+											"id": "bbaa9e18-2e12-49a8-a402-20fc088e0ea4",
+											"name": "Preset deleted successfully",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/sorter/:sorterId/preset/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"sorter",
+														":sorterId",
+														"preset",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "55110855",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n  \"id\": 21356960,\n  \"name\": \"mollit ad sed\",\n  \"description\": \"veniam cupidatat reprehenderit ullamco aliqua\",\n  \"sorterId\": -91121938,\n  \"ramps\": [\n    {\n      \"id\": -10009561,\n      \"name\": \"laboris s\",\n      \"routes\": [\n        {\n          \"id\": 69785961,\n          \"serviceId\": \"nisi nulla esse\",\n          \"zone\": \"in id ut\"\n        },\n        {\n          \"id\": 93965286,\n          \"serviceId\": \"dolor nostrud\",\n          \"zone\": \"Excepteur anim deserunt\"\n        }\n      ],\n      \"active\": false,\n      \"rampType\": {\n        \"id\": 62672030,\n        \"name\": \"deserunt Excepteur dolor magna\",\n        \"description\": \"minim\"\n      }\n    },\n    {\n      \"id\": 27256583,\n      \"name\": \"ut\",\n      \"routes\": [\n        {\n          \"id\": 93064299,\n          \"serviceId\": \"id ullamco\",\n          \"zone\": \"irure\"\n        },\n        {\n          \"id\": 78010690,\n          \"serviceId\": \"tempor exercitation sunt consequat\",\n          \"zone\": \"proident amet in\"\n        }\n      ],\n      \"active\": false,\n      \"rampType\": {\n        \"id\": -95210080,\n        \"name\": \"sit et in\",\n        \"description\": \"dolor quis\"\n      }\n    }\n  ],\n  \"createdAt\": \"nulla nostrud adipisi\",\n  \"createdBy\": \"Duis elit\",\n  \"updatedAt\": \"dolor Duis\",\n  \"updatedBy\": \"reprehe\",\n  \"activatedAt\": \"dolore ut amet do\",\n  \"activatedBy\": \"quis\",\n  \"active\": true\n}"
+										},
+										{
+											"id": "c6324b01-d36f-4cf5-a0d7-69db9a3aeb08",
+											"name": "To represent some server side related error",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/sorter/:sorterId/preset/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"sorter",
+														":sorterId",
+														"preset",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "55110855",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n  \"error\": \"minim laboris Ut anim aute\",\n  \"message\": \"do Excepteur qui labore\",\n  \"status\": -17016758,\n  \"cause\": [\n    \"eiusmod ad sit\",\n    \"consequat laboris\"\n  ]\n}"
+										}
+									]
+								}
+							],
+							"id": "d5fd0d00-0ece-44bb-b310-fec2a6a2ab73"
+						},
+						{
+							"name": "list preset by sorter",
+							"id": "96cdb962-a43a-47a8-a087-96b3732ac52e",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/sorter/:sorterId/preset?active=false",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"sorter",
+										":sorterId",
+										"preset"
+									],
+									"query": [
+										{
+											"key": "active",
+											"value": "false"
+										}
+									],
+									"variable": [
+										{
+											"id": "cf677ac2-e17d-44e6-837c-7860de525531",
+											"key": "sorterId",
+											"value": "55110855",
+											"description": "(Required) "
+										}
+									]
+								},
+								"description": "Returns a list of presets by sorter"
+							},
+							"response": [
+								{
+									"id": "cc0f6cfa-db38-4707-b3ee-9f6c5080f235",
+									"name": "Returns a list of presets",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/sorter/:sorterId/preset?active=true",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"sorter",
+												":sorterId",
+												"preset"
+											],
+											"query": [
+												{
+													"key": "active",
+													"value": "true"
+												}
+											],
+											"variable": [
+												{
+													"key": "sorterId",
+													"value": "55110855",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "\"id ut ullamco magna\""
+								},
+								{
+									"id": "5b469e8a-6ea3-47d2-b696-266f65a6c9bd",
+									"name": "To represent some server side related error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/sorter/:sorterId/preset?active=true",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"sorter",
+												":sorterId",
+												"preset"
+											],
+											"query": [
+												{
+													"key": "active",
+													"value": "true"
+												}
+											],
+											"variable": [
+												{
+													"key": "sorterId",
+													"value": "55110855",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n  \"error\": \"minim laboris Ut anim aute\",\n  \"message\": \"do Excepteur qui labore\",\n  \"status\": -17016758,\n  \"cause\": [\n    \"eiusmod ad sit\",\n    \"consequat laboris\"\n  ]\n}"
+								}
+							]
+						},
+						{
+							"name": "save preset",
+							"id": "b667e1f7-3298-4329-a174-3bdca159b025",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": -12199716,\n  \"name\": \"consequat in\",\n  \"description\": \"dolor Excepteur cillum incididunt\",\n  \"sorterId\": -38090369,\n  \"ramps\": [\n    {\n      \"id\": -14774010,\n      \"name\": \"exer\",\n      \"routes\": [\n        {\n          \"id\": -16287639,\n          \"serviceId\": \"reprehenderit occaecat fugiat minim\",\n          \"zone\": \"Excepteur in cupidatat amet in\"\n        },\n        {\n          \"id\": 21318731,\n          \"serviceId\": \"nulla laborum\",\n          \"zone\": \"dolore\"\n        }\n      ],\n      \"active\": false,\n      \"rampType\": {\n        \"id\": -35600011,\n        \"name\": \"velit ullamco\",\n        \"description\": \"d\"\n      }\n    },\n    {\n      \"id\": 49704334,\n      \"name\": \"exercitation adipisicing sint dol\",\n      \"routes\": [\n        {\n          \"id\": 7811392,\n          \"serviceId\": \"mollit labore minim\",\n          \"zone\": \"nulla qui deserunt\"\n        },\n        {\n          \"id\": -6514436,\n          \"serviceId\": \"nostrud voluptate ex ullamco Duis\",\n          \"zone\": \"Ut in minim\"\n        }\n      ],\n      \"active\": true,\n      \"rampType\": {\n        \"id\": -37565625,\n        \"name\": \"ut sunt exercitation anim\",\n        \"description\": \"mollit proident dolor ullamco ut\"\n      }\n    }\n  ],\n  \"createdAt\": \"enim ex\",\n  \"createdBy\": \"do occaecat aute fugiat\",\n  \"updatedAt\": \"ad nulla consequat mollit\",\n  \"updatedBy\": \"quis pariatur aute\",\n  \"activatedAt\": \"aliqua do adipisicing\",\n  \"activatedBy\": \"ullamco \",\n  \"active\": false\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/sorter/:sorterId/preset",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"sorter",
+										":sorterId",
+										"preset"
+									],
+									"variable": [
+										{
+											"key": "sorterId"
+										}
+									]
+								},
+								"description": "Save a preset"
+							},
+							"response": [
+								{
+									"id": "07287bdb-2e6b-4d73-8a24-c2f166dfda29",
+									"name": "Preset saved successfully",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": 21356960,\n  \"name\": \"mollit ad sed\",\n  \"description\": \"veniam cupidatat reprehenderit ullamco aliqua\",\n  \"sorterId\": -91121938,\n  \"ramps\": [\n    {\n      \"id\": -10009561,\n      \"name\": \"laboris s\",\n      \"routes\": [\n        {\n          \"id\": 69785961,\n          \"serviceId\": \"nisi nulla esse\",\n          \"zone\": \"in id ut\"\n        },\n        {\n          \"id\": 93965286,\n          \"serviceId\": \"dolor nostrud\",\n          \"zone\": \"Excepteur anim deserunt\"\n        }\n      ],\n      \"active\": false,\n      \"rampType\": {\n        \"id\": 62672030,\n        \"name\": \"deserunt Excepteur dolor magna\",\n        \"description\": \"minim\"\n      }\n    },\n    {\n      \"id\": 27256583,\n      \"name\": \"ut\",\n      \"routes\": [\n        {\n          \"id\": 93064299,\n          \"serviceId\": \"id ullamco\",\n          \"zone\": \"irure\"\n        },\n        {\n          \"id\": 78010690,\n          \"serviceId\": \"tempor exercitation sunt consequat\",\n          \"zone\": \"proident amet in\"\n        }\n      ],\n      \"active\": false,\n      \"rampType\": {\n        \"id\": -95210080,\n        \"name\": \"sit et in\",\n        \"description\": \"dolor quis\"\n      }\n    }\n  ],\n  \"createdAt\": \"nulla nostrud adipisi\",\n  \"createdBy\": \"Duis elit\",\n  \"updatedAt\": \"dolor Duis\",\n  \"updatedBy\": \"reprehe\",\n  \"activatedAt\": \"dolore ut amet do\",\n  \"activatedBy\": \"quis\",\n  \"active\": true\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/sorter/:sorterId/preset",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"sorter",
+												":sorterId",
+												"preset"
+											],
+											"variable": [
+												{
+													"key": "sorterId"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n  \"id\": 21356960,\n  \"name\": \"mollit ad sed\",\n  \"description\": \"veniam cupidatat reprehenderit ullamco aliqua\",\n  \"sorterId\": -91121938,\n  \"ramps\": [\n    {\n      \"id\": -10009561,\n      \"name\": \"laboris s\",\n      \"routes\": [\n        {\n          \"id\": 69785961,\n          \"serviceId\": \"nisi nulla esse\",\n          \"zone\": \"in id ut\"\n        },\n        {\n          \"id\": 93965286,\n          \"serviceId\": \"dolor nostrud\",\n          \"zone\": \"Excepteur anim deserunt\"\n        }\n      ],\n      \"active\": false,\n      \"rampType\": {\n        \"id\": 62672030,\n        \"name\": \"deserunt Excepteur dolor magna\",\n        \"description\": \"minim\"\n      }\n    },\n    {\n      \"id\": 27256583,\n      \"name\": \"ut\",\n      \"routes\": [\n        {\n          \"id\": 93064299,\n          \"serviceId\": \"id ullamco\",\n          \"zone\": \"irure\"\n        },\n        {\n          \"id\": 78010690,\n          \"serviceId\": \"tempor exercitation sunt consequat\",\n          \"zone\": \"proident amet in\"\n        }\n      ],\n      \"active\": false,\n      \"rampType\": {\n        \"id\": -95210080,\n        \"name\": \"sit et in\",\n        \"description\": \"dolor quis\"\n      }\n    }\n  ],\n  \"createdAt\": \"nulla nostrud adipisi\",\n  \"createdBy\": \"Duis elit\",\n  \"updatedAt\": \"dolor Duis\",\n  \"updatedBy\": \"reprehe\",\n  \"activatedAt\": \"dolore ut amet do\",\n  \"activatedBy\": \"quis\",\n  \"active\": true\n}"
+								},
+								{
+									"id": "06eb9618-d733-4533-8742-9818b704feec",
+									"name": "To represent some server side related error",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": 21356960,\n  \"name\": \"mollit ad sed\",\n  \"description\": \"veniam cupidatat reprehenderit ullamco aliqua\",\n  \"sorterId\": -91121938,\n  \"ramps\": [\n    {\n      \"id\": -10009561,\n      \"name\": \"laboris s\",\n      \"routes\": [\n        {\n          \"id\": 69785961,\n          \"serviceId\": \"nisi nulla esse\",\n          \"zone\": \"in id ut\"\n        },\n        {\n          \"id\": 93965286,\n          \"serviceId\": \"dolor nostrud\",\n          \"zone\": \"Excepteur anim deserunt\"\n        }\n      ],\n      \"active\": false,\n      \"rampType\": {\n        \"id\": 62672030,\n        \"name\": \"deserunt Excepteur dolor magna\",\n        \"description\": \"minim\"\n      }\n    },\n    {\n      \"id\": 27256583,\n      \"name\": \"ut\",\n      \"routes\": [\n        {\n          \"id\": 93064299,\n          \"serviceId\": \"id ullamco\",\n          \"zone\": \"irure\"\n        },\n        {\n          \"id\": 78010690,\n          \"serviceId\": \"tempor exercitation sunt consequat\",\n          \"zone\": \"proident amet in\"\n        }\n      ],\n      \"active\": false,\n      \"rampType\": {\n        \"id\": -95210080,\n        \"name\": \"sit et in\",\n        \"description\": \"dolor quis\"\n      }\n    }\n  ],\n  \"createdAt\": \"nulla nostrud adipisi\",\n  \"createdBy\": \"Duis elit\",\n  \"updatedAt\": \"dolor Duis\",\n  \"updatedBy\": \"reprehe\",\n  \"activatedAt\": \"dolore ut amet do\",\n  \"activatedBy\": \"quis\",\n  \"active\": true\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/sorter/:sorterId/preset",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"sorter",
+												":sorterId",
+												"preset"
+											],
+											"variable": [
+												{
+													"key": "sorterId"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n  \"error\": \"minim laboris Ut anim aute\",\n  \"message\": \"do Excepteur qui labore\",\n  \"status\": -17016758,\n  \"cause\": [\n    \"eiusmod ad sit\",\n    \"consequat laboris\"\n  ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Activate preset",
+							"id": "ece5521b-ad37-410f-85f9-b523fe8b7a1d",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/sorter/:sorterId/preset/activate/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"sorter",
+										":sorterId",
+										"preset",
+										"activate",
+										":id"
+									],
+									"variable": [
+										{
+											"id": "0ed41100-0a96-4764-a59a-4506d2202c6a",
+											"key": "id",
+											"value": "55110855",
+											"description": "(Required) "
+										}
+									]
+								},
+								"description": "Activate a preset"
+							},
+							"response": [
+								{
+									"id": "bce8e0f5-b711-4d71-87de-7ad38a6a1b07",
+									"name": "Preset activate successfully",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/sorter/:sorterId/preset/activate/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"sorter",
+												":sorterId",
+												"preset",
+												"activate",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "55110855",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n  \"id\": 21356960,\n  \"name\": \"mollit ad sed\",\n  \"description\": \"veniam cupidatat reprehenderit ullamco aliqua\",\n  \"sorterId\": -91121938,\n  \"ramps\": [\n    {\n      \"id\": -10009561,\n      \"name\": \"laboris s\",\n      \"routes\": [\n        {\n          \"id\": 69785961,\n          \"serviceId\": \"nisi nulla esse\",\n          \"zone\": \"in id ut\"\n        },\n        {\n          \"id\": 93965286,\n          \"serviceId\": \"dolor nostrud\",\n          \"zone\": \"Excepteur anim deserunt\"\n        }\n      ],\n      \"active\": false,\n      \"rampType\": {\n        \"id\": 62672030,\n        \"name\": \"deserunt Excepteur dolor magna\",\n        \"description\": \"minim\"\n      }\n    },\n    {\n      \"id\": 27256583,\n      \"name\": \"ut\",\n      \"routes\": [\n        {\n          \"id\": 93064299,\n          \"serviceId\": \"id ullamco\",\n          \"zone\": \"irure\"\n        },\n        {\n          \"id\": 78010690,\n          \"serviceId\": \"tempor exercitation sunt consequat\",\n          \"zone\": \"proident amet in\"\n        }\n      ],\n      \"active\": false,\n      \"rampType\": {\n        \"id\": -95210080,\n        \"name\": \"sit et in\",\n        \"description\": \"dolor quis\"\n      }\n    }\n  ],\n  \"createdAt\": \"nulla nostrud adipisi\",\n  \"createdBy\": \"Duis elit\",\n  \"updatedAt\": \"dolor Duis\",\n  \"updatedBy\": \"reprehe\",\n  \"activatedAt\": \"dolore ut amet do\",\n  \"activatedBy\": \"quis\",\n  \"active\": true\n}"
+								},
+								{
+									"id": "10105ce0-fd70-4056-a064-82b9b05b1214",
+									"name": "To represent some server side related error",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/sorter/:sorterId/preset/activate/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"sorter",
+												":sorterId",
+												"preset",
+												"activate",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "55110855",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n  \"error\": \"minim laboris Ut anim aute\",\n  \"message\": \"do Excepteur qui labore\",\n  \"status\": -17016758,\n  \"cause\": [\n    \"eiusmod ad sit\",\n    \"consequat laboris\"\n  ]\n}"
+								}
+							]
+						}
+					],
+					"id": "e6d85172-cede-4b9b-800d-1eaac73b3b70"
+				},
+				{
+					"name": "{sorter id}",
+					"item": [
+						{
+							"name": "list sorter",
+							"id": "1ab7d5c2-585d-4121-b106-36a8fd075397",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/sorter/:sorter_id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"sorter",
+										":sorter_id"
+									],
+									"variable": [
+										{
+											"id": "626c2e13-681d-4184-95fd-67ac3a8c4e6c",
+											"key": "sorter_id",
+											"value": "55110855",
+											"description": "(Required) "
+										}
+									]
+								},
+								"description": "Returns a list of sorter"
+							},
+							"response": [
+								{
+									"id": "f9e1233f-abe1-4c7b-b29e-5ad6f31a5b08",
+									"name": "Returns a list of Sorters",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/sorter/:sorter_id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"sorter",
+												":sorter_id"
+											],
+											"variable": [
+												{
+													"key": "sorter_id",
+													"value": "55110855",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n  \"id\": 30757972,\n  \"name\": \"deserunt aliquip\",\n  \"description\": \"Duis amet ipsum occaecat\",\n  \"logisticCenterId\": \"aliqua id\",\n  \"active\": true,\n  \"maxCapacityPerHour\": 55577174,\n  \"configurationIds\": [\n    -84229708,\n    -32106696\n  ],\n  \"urls\": [\n    {\n      \"id\": 21374538,\n      \"alias\": \"aliquip irure tempor dolore\",\n      \"url\": \"officia deserunt\"\n    },\n    {\n      \"id\": 71460926,\n      \"alias\": \"Lorem qui consequat aliq\",\n      \"url\": \"proident aute voluptate\"\n    }\n  ]\n}"
+								},
+								{
+									"id": "c9c18119-c58c-471c-81f1-b01edbedfc6d",
+									"name": "Sorter not found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/sorter/:sorter_id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"sorter",
+												":sorter_id"
+											],
+											"variable": [
+												{
+													"key": "sorter_id",
+													"value": "55110855",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n  \"error\": \"minim laboris Ut anim aute\",\n  \"message\": \"do Excepteur qui labore\",\n  \"status\": -17016758,\n  \"cause\": [\n    \"eiusmod ad sit\",\n    \"consequat laboris\"\n  ]\n}"
+								},
+								{
+									"id": "1ba71067-a474-44e4-bf7d-afe3c82bc370",
+									"name": "To represent some server side related error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/sorter/:sorter_id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"sorter",
+												":sorter_id"
+											],
+											"variable": [
+												{
+													"key": "sorter_id",
+													"value": "55110855",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n  \"error\": \"minim laboris Ut anim aute\",\n  \"message\": \"do Excepteur qui labore\",\n  \"status\": -17016758,\n  \"cause\": [\n    \"eiusmod ad sit\",\n    \"consequat laboris\"\n  ]\n}"
+								}
+							]
+						},
+						{
+							"name": "delete sorter",
+							"id": "763f4180-f80b-47b6-8f70-d26309b659c1",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/sorter/:sorter_id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"sorter",
+										":sorter_id"
+									],
+									"variable": [
+										{
+											"id": "54d10ed1-7423-467a-b701-77a725da84ab",
+											"key": "sorter_id",
+											"value": "55110855",
+											"description": "(Required) "
+										}
+									]
+								},
+								"description": "Delete a sorter by id"
+							},
+							"response": [
+								{
+									"id": "d9c4f54c-7bcf-4c1b-bf5e-c937f9a09bb0",
+									"name": "Delete a sorter by id",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/sorter/:sorter_id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"sorter",
+												":sorter_id"
+											],
+											"variable": [
+												{
+													"key": "sorter_id",
+													"value": "55110855",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": ""
+								},
+								{
+									"id": "a9002195-de97-49d2-9583-2d3eba0867c9",
+									"name": "Sorter not found",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/sorter/:sorter_id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"sorter",
+												":sorter_id"
+											],
+											"variable": [
+												{
+													"key": "sorter_id",
+													"value": "55110855",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n  \"error\": \"minim laboris Ut anim aute\",\n  \"message\": \"do Excepteur qui labore\",\n  \"status\": -17016758,\n  \"cause\": [\n    \"eiusmod ad sit\",\n    \"consequat laboris\"\n  ]\n}"
+								},
+								{
+									"id": "94dc055f-ce43-4fdd-b32a-b49751478437",
+									"name": "To represent some server side related error",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/sorter/:sorter_id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"sorter",
+												":sorter_id"
+											],
+											"variable": [
+												{
+													"key": "sorter_id",
+													"value": "55110855",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n  \"error\": \"minim laboris Ut anim aute\",\n  \"message\": \"do Excepteur qui labore\",\n  \"status\": -17016758,\n  \"cause\": [\n    \"eiusmod ad sit\",\n    \"consequat laboris\"\n  ]\n}"
+								}
+							]
+						}
+					],
+					"id": "0753ff2f-3258-43eb-9e89-a46f111026f2"
+				},
+				{
+					"name": "list sorter",
+					"id": "a18f738e-6146-4722-a3eb-f71d760bc063",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/sorter",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"sorter"
+							]
+						},
+						"description": "Returns a list of sorter"
+					},
+					"response": [
+						{
+							"id": "c8b39b1b-756d-402d-a791-c9fa81af7fca",
+							"name": "Returns a list of Sorters",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/sorter",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"sorter"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "\"id ut ullamco magna\""
+						},
+						{
+							"id": "df07442d-18d1-41e3-ae93-fb63b575ce6d",
+							"name": "To represent some server side related error",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/sorter",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"sorter"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n  \"error\": \"consequat velit id Excepteur laborum\",\n  \"message\": \"est dolor minim\",\n  \"status\": -45257941,\n  \"cause\": [\n    \"sint esse\",\n    \"velit ut aliquip id dolore\"\n  ]\n}"
+						}
+					]
+				},
+				{
+					"name": "save sorter",
+					"id": "a82e01c4-e784-4477-a0e9-cf9a6b6c8add",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": 28521077,\n  \"name\": \"mollit amet\",\n  \"description\": \"labore cillum\",\n  \"logisticCenterId\": \"dolore exercitatio\",\n  \"active\": false,\n  \"maxCapacityPerHour\": 10944245,\n  \"configurationIds\": [\n    -74240829,\n    -38702313\n  ],\n  \"urls\": [\n    {\n      \"id\": -16506907,\n      \"alias\": \"aliqua ad\",\n      \"url\": \"officia in pariatur incididunt\"\n    },\n    {\n      \"id\": -99224324,\n      \"alias\": \"proident\",\n      \"url\": \"non occaecat dolor ex mollit\"\n    }\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/sorter",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"sorter"
+							]
+						},
+						"description": "Save a sorter"
+					},
+					"response": [
+						{
+							"id": "ae9f4372-1765-48bd-8e1b-c6e45445d9ab",
+							"name": "Sorter saved successfully",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": 30757972,\n  \"name\": \"deserunt aliquip\",\n  \"description\": \"Duis amet ipsum occaecat\",\n  \"logisticCenterId\": \"aliqua id\",\n  \"active\": true,\n  \"maxCapacityPerHour\": 55577174,\n  \"configurationIds\": [\n    -84229708,\n    -32106696\n  ],\n  \"urls\": [\n    {\n      \"id\": 21374538,\n      \"alias\": \"aliquip irure tempor dolore\",\n      \"url\": \"officia deserunt\"\n    },\n    {\n      \"id\": 71460926,\n      \"alias\": \"Lorem qui consequat aliq\",\n      \"url\": \"proident aute voluptate\"\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/sorter",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"sorter"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n  \"id\": 30757972,\n  \"name\": \"deserunt aliquip\",\n  \"description\": \"Duis amet ipsum occaecat\",\n  \"logisticCenterId\": \"aliqua id\",\n  \"active\": true,\n  \"maxCapacityPerHour\": 55577174,\n  \"configurationIds\": [\n    -84229708,\n    -32106696\n  ],\n  \"urls\": [\n    {\n      \"id\": 21374538,\n      \"alias\": \"aliquip irure tempor dolore\",\n      \"url\": \"officia deserunt\"\n    },\n    {\n      \"id\": 71460926,\n      \"alias\": \"Lorem qui consequat aliq\",\n      \"url\": \"proident aute voluptate\"\n    }\n  ]\n}"
+						},
+						{
+							"id": "be52d104-c640-4966-a343-ba7f0926057d",
+							"name": "To represent some server side related error",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": 30757972,\n  \"name\": \"deserunt aliquip\",\n  \"description\": \"Duis amet ipsum occaecat\",\n  \"logisticCenterId\": \"aliqua id\",\n  \"active\": true,\n  \"maxCapacityPerHour\": 55577174,\n  \"configurationIds\": [\n    -84229708,\n    -32106696\n  ],\n  \"urls\": [\n    {\n      \"id\": 21374538,\n      \"alias\": \"aliquip irure tempor dolore\",\n      \"url\": \"officia deserunt\"\n    },\n    {\n      \"id\": 71460926,\n      \"alias\": \"Lorem qui consequat aliq\",\n      \"url\": \"proident aute voluptate\"\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/sorter",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"sorter"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n  \"error\": \"minim laboris Ut anim aute\",\n  \"message\": \"do Excepteur qui labore\",\n  \"status\": -17016758,\n  \"cause\": [\n    \"eiusmod ad sit\",\n    \"consequat laboris\"\n  ]\n}"
+						}
+					]
+				},
+				{
+					"name": "update sorter",
+					"id": "8d11f81b-4a43-402e-b707-63f4419a2d4d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": 30757972,\n  \"name\": \"deserunt aliquip\",\n  \"description\": \"Duis amet ipsum occaecat\",\n  \"logisticCenterId\": \"aliqua id\",\n  \"active\": true,\n  \"maxCapacityPerHour\": 55577174,\n  \"configurationIds\": [\n    -84229708,\n    -32106696\n  ],\n  \"urls\": [\n    {\n      \"id\": 21374538,\n      \"alias\": \"aliquip irure tempor dolore\",\n      \"url\": \"officia deserunt\"\n    },\n    {\n      \"id\": 71460926,\n      \"alias\": \"Lorem qui consequat aliq\",\n      \"url\": \"proident aute voluptate\"\n    }\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/sorter/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"sorter",
+								":id"
+							],
+							"variable": [
+								{
+									"id": "be465bd1-3cdb-437a-a6c5-0afe5d46776f",
+									"key": "id",
+									"value": "55110855",
+									"description": "(Required) "
+								}
+							]
+						},
+						"description": "Updated a sorter"
+					},
+					"response": [
+						{
+							"id": "7ce67046-7818-4338-8af8-8acfdfd228b9",
+							"name": "Sorter updated successfully",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": 30757972,\n  \"name\": \"deserunt aliquip\",\n  \"description\": \"Duis amet ipsum occaecat\",\n  \"logisticCenterId\": \"aliqua id\",\n  \"active\": true,\n  \"maxCapacityPerHour\": 55577174,\n  \"configurationIds\": [\n    -84229708,\n    -32106696\n  ],\n  \"urls\": [\n    {\n      \"id\": 21374538,\n      \"alias\": \"aliquip irure tempor dolore\",\n      \"url\": \"officia deserunt\"\n    },\n    {\n      \"id\": 71460926,\n      \"alias\": \"Lorem qui consequat aliq\",\n      \"url\": \"proident aute voluptate\"\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/sorter/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"sorter",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "55110855",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n  \"id\": 30757972,\n  \"name\": \"deserunt aliquip\",\n  \"description\": \"Duis amet ipsum occaecat\",\n  \"logisticCenterId\": \"aliqua id\",\n  \"active\": true,\n  \"maxCapacityPerHour\": 55577174,\n  \"configurationIds\": [\n    -84229708,\n    -32106696\n  ],\n  \"urls\": [\n    {\n      \"id\": 21374538,\n      \"alias\": \"aliquip irure tempor dolore\",\n      \"url\": \"officia deserunt\"\n    },\n    {\n      \"id\": 71460926,\n      \"alias\": \"Lorem qui consequat aliq\",\n      \"url\": \"proident aute voluptate\"\n    }\n  ]\n}"
+						},
+						{
+							"id": "abc8f02f-aeb6-489c-b5d0-b075d43873e6",
+							"name": "Sorter not found",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": 30757972,\n  \"name\": \"deserunt aliquip\",\n  \"description\": \"Duis amet ipsum occaecat\",\n  \"logisticCenterId\": \"aliqua id\",\n  \"active\": true,\n  \"maxCapacityPerHour\": 55577174,\n  \"configurationIds\": [\n    -84229708,\n    -32106696\n  ],\n  \"urls\": [\n    {\n      \"id\": 21374538,\n      \"alias\": \"aliquip irure tempor dolore\",\n      \"url\": \"officia deserunt\"\n    },\n    {\n      \"id\": 71460926,\n      \"alias\": \"Lorem qui consequat aliq\",\n      \"url\": \"proident aute voluptate\"\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/sorter/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"sorter",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "55110855",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n  \"error\": \"minim laboris Ut anim aute\",\n  \"message\": \"do Excepteur qui labore\",\n  \"status\": -17016758,\n  \"cause\": [\n    \"eiusmod ad sit\",\n    \"consequat laboris\"\n  ]\n}"
+						},
+						{
+							"id": "9b90e8c1-7ef5-4989-9d88-32ebd98d1845",
+							"name": "To represent some server side related error",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": 30757972,\n  \"name\": \"deserunt aliquip\",\n  \"description\": \"Duis amet ipsum occaecat\",\n  \"logisticCenterId\": \"aliqua id\",\n  \"active\": true,\n  \"maxCapacityPerHour\": 55577174,\n  \"configurationIds\": [\n    -84229708,\n    -32106696\n  ],\n  \"urls\": [\n    {\n      \"id\": 21374538,\n      \"alias\": \"aliquip irure tempor dolore\",\n      \"url\": \"officia deserunt\"\n    },\n    {\n      \"id\": 71460926,\n      \"alias\": \"Lorem qui consequat aliq\",\n      \"url\": \"proident aute voluptate\"\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/sorter/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"sorter",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "55110855",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n  \"error\": \"minim laboris Ut anim aute\",\n  \"message\": \"do Excepteur qui labore\",\n  \"status\": -17016758,\n  \"cause\": [\n    \"eiusmod ad sit\",\n    \"consequat laboris\"\n  ]\n}"
+						}
+					]
+				}
+			],
+			"id": "78c2b70b-e9ff-4309-87ce-ccc408d2037c"
+		},
+		{
+			"name": "ramp-type",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "find ramp type",
+							"id": "4663cee5-8f95-45b0-960a-d7ce9a43da11",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/ramp-type/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"ramp-type",
+										":id"
+									],
+									"variable": [
+										{
+											"id": "6d51bf86-7edc-4554-b1c7-6032f03fa5d8",
+											"key": "id",
+											"value": "55110855",
+											"description": "(Required) "
+										}
+									]
+								},
+								"description": "Returns a ramp type by id"
+							},
+							"response": [
+								{
+									"id": "61da701a-10c0-48c0-bf74-e30d49c08bd5",
+									"name": "Returns a ramp type by id",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/ramp-type/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ramp-type",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "55110855",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "\"id ut ullamco magna\""
+								},
+								{
+									"id": "27d13e1b-edd8-44a6-8ee2-e4ea99a3ef26",
+									"name": "To represent some server side related error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/ramp-type/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ramp-type",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "55110855",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n  \"error\": \"minim laboris Ut anim aute\",\n  \"message\": \"do Excepteur qui labore\",\n  \"status\": -17016758,\n  \"cause\": [\n    \"eiusmod ad sit\",\n    \"consequat laboris\"\n  ]\n}"
+								}
+							]
+						},
+						{
+							"name": "update ramp type",
+							"id": "2ee8128d-1e96-41c6-a8e9-80ba73c19014",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": -95674215,\n  \"name\": \"laborum in\",\n  \"description\": \"magna et deserunt\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/ramp-type/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"ramp-type",
+										":id"
+									],
+									"variable": [
+										{
+											"id": "6abe6c0c-4d76-4edb-a370-08410daf65ac",
+											"key": "id",
+											"value": "55110855",
+											"description": "(Required) "
+										}
+									]
+								},
+								"description": "Update a ramp type"
+							},
+							"response": [
+								{
+									"id": "8d718487-acbc-44c3-891f-52cae516e87d",
+									"name": "Ramp type updated successfully",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": -95674215,\n  \"name\": \"laborum in\",\n  \"description\": \"magna et deserunt\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/ramp-type/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ramp-type",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "55110855",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n  \"id\": -95674215,\n  \"name\": \"laborum in\",\n  \"description\": \"magna et deserunt\"\n}"
+								},
+								{
+									"id": "df8209f2-ffa1-499b-aa79-b06ab1b40e7d",
+									"name": "To represent some server side related error",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": -95674215,\n  \"name\": \"laborum in\",\n  \"description\": \"magna et deserunt\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/ramp-type/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ramp-type",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "55110855",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n  \"error\": \"minim laboris Ut anim aute\",\n  \"message\": \"do Excepteur qui labore\",\n  \"status\": -17016758,\n  \"cause\": [\n    \"eiusmod ad sit\",\n    \"consequat laboris\"\n  ]\n}"
+								}
+							]
+						},
+						{
+							"name": "delete ramp type",
+							"id": "be1e351e-93af-44e7-ab05-0dc0c6784885",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/ramp-type/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"ramp-type",
+										":id"
+									],
+									"variable": [
+										{
+											"id": "f5271b54-36ed-493d-a01d-a3e8057db614",
+											"key": "id",
+											"value": "55110855",
+											"description": "(Required) "
+										}
+									]
+								},
+								"description": "Delete a ramp type"
+							},
+							"response": [
+								{
+									"id": "4dad1354-fbc8-4812-bb4a-33f230ffbd18",
+									"name": "Ramp type deleted successfully",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/ramp-type/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ramp-type",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "55110855",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n  \"id\": -95674215,\n  \"name\": \"laborum in\",\n  \"description\": \"magna et deserunt\"\n}"
+								},
+								{
+									"id": "b6a9e05c-7704-4b2e-8c3e-af5febffead6",
+									"name": "To represent some server side related error",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/ramp-type/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ramp-type",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "55110855",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n  \"error\": \"minim laboris Ut anim aute\",\n  \"message\": \"do Excepteur qui labore\",\n  \"status\": -17016758,\n  \"cause\": [\n    \"eiusmod ad sit\",\n    \"consequat laboris\"\n  ]\n}"
+								}
+							]
+						}
+					],
+					"id": "6ed19dfa-009b-4c1f-9824-9e3f1377a2f5"
+				},
+				{
+					"name": "list ramp type",
+					"id": "90450ab3-a99d-4010-8672-139ec804d45c",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/ramp-type",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"ramp-type"
+							]
+						},
+						"description": "Returns a list of ramp types"
+					},
+					"response": [
+						{
+							"id": "4007c223-dab2-44f1-bff2-df68e90cc2b0",
+							"name": "Returns a list of ramp types",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/ramp-type",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"ramp-type"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "\"id ut ullamco magna\""
+						},
+						{
+							"id": "d96611db-7c7a-493e-a025-118374beb1f5",
+							"name": "To represent some server side related error",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/ramp-type",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"ramp-type"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n  \"error\": \"minim laboris Ut anim aute\",\n  \"message\": \"do Excepteur qui labore\",\n  \"status\": -17016758,\n  \"cause\": [\n    \"eiusmod ad sit\",\n    \"consequat laboris\"\n  ]\n}"
+						}
+					]
+				},
+				{
+					"name": "save ramp type",
+					"id": "5d2747c2-02e2-464b-8a27-d59f7d1ee621",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": -95674215,\n  \"name\": \"laborum in\",\n  \"description\": \"magna et deserunt\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/ramp-type",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"ramp-type"
+							]
+						},
+						"description": "Save a ramp type"
+					},
+					"response": [
+						{
+							"id": "b7b00ead-b627-4b50-8f32-bb924b2c61a6",
+							"name": "Ramp type saved successfully",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": -95674215,\n  \"name\": \"laborum in\",\n  \"description\": \"magna et deserunt\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/ramp-type",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"ramp-type"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n  \"id\": -95674215,\n  \"name\": \"laborum in\",\n  \"description\": \"magna et deserunt\"\n}"
+						},
+						{
+							"id": "a573f9bf-c3ef-4588-93d4-b04d7cb94f68",
+							"name": "To represent some server side related error",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": -95674215,\n  \"name\": \"laborum in\",\n  \"description\": \"magna et deserunt\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/ramp-type",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"ramp-type"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n  \"error\": \"minim laboris Ut anim aute\",\n  \"message\": \"do Excepteur qui labore\",\n  \"status\": -17016758,\n  \"cause\": [\n    \"eiusmod ad sit\",\n    \"consequat laboris\"\n  ]\n}"
+						}
+					]
+				}
+			],
+			"id": "05eb52cb-aa40-4d90-aa8c-5533fe3594bc"
+		},
+		{
+			"name": "preset/{preset Id}/ramp/{ramp Id}",
+			"item": [
+				{
+					"name": "find ramp",
+					"id": "5506f620-43fd-4add-ab58-62df935b95e8",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/preset/:presetId/ramp/:rampId",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"preset",
+								":presetId",
+								"ramp",
+								":rampId"
+							],
+							"variable": [
+								{
+									"id": "ad77e0bf-87f7-44df-9257-33125d7ae2b9",
+									"key": "presetId",
+									"value": "55110855",
+									"description": "(Required) "
+								},
+								{
+									"id": "e9c797a0-9163-4676-914d-62d608676b77",
+									"key": "rampId",
+									"value": "55110855",
+									"description": "(Required) "
+								}
+							]
+						},
+						"description": "Returns a ramp type by id"
+					},
+					"response": [
+						{
+							"id": "e1ed22bd-dd2c-466b-9d4e-9d8b0e73a2a3",
+							"name": "Returns a ramp and routes by id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/preset/:presetId/ramp/:rampId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"preset",
+										":presetId",
+										"ramp",
+										":rampId"
+									],
+									"variable": [
+										{
+											"key": "presetId",
+											"value": "55110855",
+											"description": "(Required) "
+										},
+										{
+											"key": "rampId",
+											"value": "55110855",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "\"id ut ullamco magna\""
+						},
+						{
+							"id": "bc24fa51-1159-401d-a2d8-946f0bce3f73",
+							"name": "To represent some server side related error",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/preset/:presetId/ramp/:rampId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"preset",
+										":presetId",
+										"ramp",
+										":rampId"
+									],
+									"variable": [
+										{
+											"key": "presetId",
+											"value": "55110855",
+											"description": "(Required) "
+										},
+										{
+											"key": "rampId",
+											"value": "55110855",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n  \"error\": \"minim laboris Ut anim aute\",\n  \"message\": \"do Excepteur qui labore\",\n  \"status\": -17016758,\n  \"cause\": [\n    \"eiusmod ad sit\",\n    \"consequat laboris\"\n  ]\n}"
+						}
+					]
+				},
+				{
+					"name": "update preset pamp",
+					"id": "2e2acdbb-269f-4756-a96e-e43940d79eed",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": -11560778,\n  \"name\": \"in ad in sint\",\n  \"routes\": [\n    {\n      \"id\": -25867883,\n      \"serviceId\": \"aliquip in al\",\n      \"zone\": \"enim laborum adipisicing\"\n    },\n    {\n      \"id\": 46884227,\n      \"serviceId\": \"et consequat\",\n      \"zone\": \"nostrud proident consequat mollit\"\n    }\n  ],\n  \"active\": false,\n  \"rampType\": {\n    \"id\": 1162674,\n    \"name\": \"Lorem laborum sit\",\n    \"description\": \"non in nisi consectetur in\"\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/preset/:presetId/ramp/:rampId",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"preset",
+								":presetId",
+								"ramp",
+								":rampId"
+							],
+							"variable": [
+								{
+									"id": "c8fb4f69-091d-4429-8bf0-a3031cf2bbca",
+									"key": "presetId",
+									"value": "55110855",
+									"description": "(Required) "
+								},
+								{
+									"id": "1f7563aa-9347-464d-9c74-0818583feb06",
+									"key": "rampId",
+									"value": "55110855",
+									"description": "(Required) "
+								}
+							]
+						},
+						"description": "Updated a Preset Ramp"
+					},
+					"response": [
+						{
+							"id": "4103bdb8-7cb9-4372-8c2d-54cc1973554e",
+							"name": "Preset Ramp updated successfully",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": -11560778,\n  \"name\": \"in ad in sint\",\n  \"routes\": [\n    {\n      \"id\": -25867883,\n      \"serviceId\": \"aliquip in al\",\n      \"zone\": \"enim laborum adipisicing\"\n    },\n    {\n      \"id\": 46884227,\n      \"serviceId\": \"et consequat\",\n      \"zone\": \"nostrud proident consequat mollit\"\n    }\n  ],\n  \"active\": false,\n  \"rampType\": {\n    \"id\": 1162674,\n    \"name\": \"Lorem laborum sit\",\n    \"description\": \"non in nisi consectetur in\"\n  }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/preset/:presetId/ramp/:rampId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"preset",
+										":presetId",
+										"ramp",
+										":rampId"
+									],
+									"variable": [
+										{
+											"key": "presetId",
+											"value": "55110855",
+											"description": "(Required) "
+										},
+										{
+											"key": "rampId",
+											"value": "55110855",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n  \"id\": -11560778,\n  \"name\": \"in ad in sint\",\n  \"routes\": [\n    {\n      \"id\": -25867883,\n      \"serviceId\": \"aliquip in al\",\n      \"zone\": \"enim laborum adipisicing\"\n    },\n    {\n      \"id\": 46884227,\n      \"serviceId\": \"et consequat\",\n      \"zone\": \"nostrud proident consequat mollit\"\n    }\n  ],\n  \"active\": false,\n  \"rampType\": {\n    \"id\": 1162674,\n    \"name\": \"Lorem laborum sit\",\n    \"description\": \"non in nisi consectetur in\"\n  }\n}"
+						},
+						{
+							"id": "ffabdad4-2a07-48b5-936a-d2eb5aaaa718",
+							"name": "Preset Ramp not found",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": -11560778,\n  \"name\": \"in ad in sint\",\n  \"routes\": [\n    {\n      \"id\": -25867883,\n      \"serviceId\": \"aliquip in al\",\n      \"zone\": \"enim laborum adipisicing\"\n    },\n    {\n      \"id\": 46884227,\n      \"serviceId\": \"et consequat\",\n      \"zone\": \"nostrud proident consequat mollit\"\n    }\n  ],\n  \"active\": false,\n  \"rampType\": {\n    \"id\": 1162674,\n    \"name\": \"Lorem laborum sit\",\n    \"description\": \"non in nisi consectetur in\"\n  }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/preset/:presetId/ramp/:rampId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"preset",
+										":presetId",
+										"ramp",
+										":rampId"
+									],
+									"variable": [
+										{
+											"key": "presetId",
+											"value": "55110855",
+											"description": "(Required) "
+										},
+										{
+											"key": "rampId",
+											"value": "55110855",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n  \"error\": \"minim laboris Ut anim aute\",\n  \"message\": \"do Excepteur qui labore\",\n  \"status\": -17016758,\n  \"cause\": [\n    \"eiusmod ad sit\",\n    \"consequat laboris\"\n  ]\n}"
+						},
+						{
+							"id": "a12e7cf9-f58e-4a44-a9fd-16d92715e113",
+							"name": "To represent some server side related error",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": -11560778,\n  \"name\": \"in ad in sint\",\n  \"routes\": [\n    {\n      \"id\": -25867883,\n      \"serviceId\": \"aliquip in al\",\n      \"zone\": \"enim laborum adipisicing\"\n    },\n    {\n      \"id\": 46884227,\n      \"serviceId\": \"et consequat\",\n      \"zone\": \"nostrud proident consequat mollit\"\n    }\n  ],\n  \"active\": false,\n  \"rampType\": {\n    \"id\": 1162674,\n    \"name\": \"Lorem laborum sit\",\n    \"description\": \"non in nisi consectetur in\"\n  }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/preset/:presetId/ramp/:rampId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"preset",
+										":presetId",
+										"ramp",
+										":rampId"
+									],
+									"variable": [
+										{
+											"key": "presetId",
+											"value": "55110855",
+											"description": "(Required) "
+										},
+										{
+											"key": "rampId",
+											"value": "55110855",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n  \"error\": \"minim laboris Ut anim aute\",\n  \"message\": \"do Excepteur qui labore\",\n  \"status\": -17016758,\n  \"cause\": [\n    \"eiusmod ad sit\",\n    \"consequat laboris\"\n  ]\n}"
+						}
+					]
+				}
+			],
+			"id": "88158df3-2fd9-4a9f-a154-f046acc84daa"
+		},
+		{
+			"name": "configuration",
+			"item": [
+				{
+					"name": "list configuration",
+					"id": "4e1435e6-9f61-4798-aaa3-6df40fb721df",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/configuration",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"configuration"
+							]
+						},
+						"description": "Returns a list of configuration"
+					},
+					"response": [
+						{
+							"id": "25ba5bb2-1568-49a6-b42e-fe5318836f0c",
+							"name": "Returns a list of Configurations",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/configuration",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"configuration"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "\"id ut ullamco magna\""
+						},
+						{
+							"id": "4f5fb732-9471-41d6-8be6-988c003115f7",
+							"name": "To represent some server side related error",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/configuration",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"configuration"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n  \"error\": \"minim laboris Ut anim aute\",\n  \"message\": \"do Excepteur qui labore\",\n  \"status\": -17016758,\n  \"cause\": [\n    \"eiusmod ad sit\",\n    \"consequat laboris\"\n  ]\n}"
+						}
+					]
+				},
+				{
+					"name": "save configuration",
+					"id": "f6b7a082-188f-4c1b-b276-d51549e604fd",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": -95674215,\n  \"name\": \"laborum in\",\n  \"description\": \"magna et deserunt\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/configuration",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"configuration"
+							]
+						},
+						"description": "Save a configuration"
+					},
+					"response": [
+						{
+							"id": "9830eee4-4535-496c-81bb-7e953e058c28",
+							"name": "Configurations saved successfully",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": -95674215,\n  \"name\": \"laborum in\",\n  \"description\": \"magna et deserunt\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/configuration",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"configuration"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n  \"id\": -95674215,\n  \"name\": \"laborum in\",\n  \"description\": \"magna et deserunt\"\n}"
+						},
+						{
+							"id": "460678cd-415f-4959-a46c-d6d4c4d08bbe",
+							"name": "To represent some server side related error",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": -95674215,\n  \"name\": \"laborum in\",\n  \"description\": \"magna et deserunt\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/configuration",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"configuration"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n  \"error\": \"minim laboris Ut anim aute\",\n  \"message\": \"do Excepteur qui labore\",\n  \"status\": -17016758,\n  \"cause\": [\n    \"eiusmod ad sit\",\n    \"consequat laboris\"\n  ]\n}"
+						}
+					]
+				}
+			],
+			"id": "75f2e975-42fc-40e5-a861-dcd0bbc14dee"
+		},
+		{
+			"name": "ping",
+			"id": "c333409c-12ef-4277-a3b8-9a0ee64ac540",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/ping",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"ping"
+					]
+				}
+			},
+			"response": [
+				{
+					"id": "e89b655c-dbdb-4ee9-818f-082ce23f5345",
+					"name": "OK",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/ping",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"ping"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"responseTime": null,
+					"body": "\"id ut ullamco magna\""
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"id": "a88f4f65-8d04-4900-828a-c506a21fb7cb",
+			"key": "baseUrl",
+			"value": "http://localhost:8082",
+			"type": "string"
+		}
+	]
+}
